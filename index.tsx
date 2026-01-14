@@ -20,7 +20,7 @@ const PROJECTS: Project[] = [
     title: "Stephen Asma",
     description: "A professional portfolio website for Stephen Asma, Professor of Philosophy, author, and cultural critic. Features an artistic design showcasing publications, research, and media appearances.",
     tools: ["JavaScript", "HTML5", "CSS3"],
-    image: "/portfolio/images/beetle.jpeg",
+    image: "./images/beetle.jpeg",
     link: "https://stephenasma.com",
     status: 'completed'
   },
