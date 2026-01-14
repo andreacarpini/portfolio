@@ -28,7 +28,7 @@ const PROJECTS: Project[] = [
     id: 2,
     title: "Medstar Consulting",
     description: "Medical tourism agency connecting US patients with Turkey's premier healthcare providers for surgical and wellness treatments.",
-    tools: ["Jekyll", "HTML5", "Tailwind", "Formspree"],
+    tools: ["Jekyll", "HTML5", "Tailwind", "JavaScript"],
     image: "./images/instanbul-guide.webp",
     link: "https://medstarconsult.com",
     status: 'completed'
@@ -118,9 +118,15 @@ const ProjectCard = ({ project }: { project: Project }) => (
           ))}
         </div>
       </div>
-      <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest mt-2 group-hover:translate-x-1 transition-transform whitespace-nowrap shrink-0">
+      {/* FIXED: Added anchor tag with link */}
+      <a 
+        href={project.link} 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest mt-2 group-hover:translate-x-1 transition-transform whitespace-nowrap shrink-0 hover:opacity-70"
+      >
         View <ArrowIcon />
-      </div>
+      </a>
     </div>
   </div>
 );
@@ -171,7 +177,7 @@ const App = () => {
                   ))}
                 </div>
                 <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest border-b border-black pb-1 whitespace-nowrap">
-                  Test Link <ArrowIcon className="w-2.5 h-2.5" />
+                  View <ArrowIcon className="w-2.5 h-2.5" />
                 </div>
               </div>
             ))}
