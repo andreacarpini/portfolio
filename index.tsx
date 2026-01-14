@@ -26,11 +26,11 @@ const PROJECTS: Project[] = [
   },
   {
     id: 2,
-    title: "Linear Archive",
-    description: "A documentation and asset management tool for creative studios.",
-    tools: ["TypeScript", "Node.js", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?q=80&w=2000&auto=format&fit=crop",
-    link: "https://github.com/andrew-karpensky",
+    title: "Medstar Consulting",
+    description: "Medical tourism agency connecting US patients with Turkey's premier healthcare providers for surgical and wellness treatments.",
+    tools: ["Jekyll", "HTML5", "Tailwind", "Formspree"],
+    image: "./images/instanbul-guide.webp",
+    link: "https://medstarconsult.com",
     status: 'completed'
   },
   {
@@ -91,7 +91,7 @@ const Hero = () => (
         <span className="italic">Karpensky</span>
       </h1>
       <p className="text-lg md:text-xl font-light leading-relaxed max-w-xl text-neutral-600">
-        Web developer.
+        Web development.
       </p>
     </div>
   </section>
@@ -171,7 +171,7 @@ const App = () => {
                   ))}
                 </div>
                 <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest border-b border-black pb-1 whitespace-nowrap">
-                  GitHub Pages <ArrowIcon className="w-2.5 h-2.5" />
+                  Test Link <ArrowIcon className="w-2.5 h-2.5" />
                 </div>
               </div>
             ))}
