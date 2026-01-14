@@ -55,6 +55,25 @@ const PROJECTS: Project[] = [
 
 // --- Components ---
 
+// --- Shared Components ---
+
+const ArrowIcon = ({ className = "w-3 h-3" }: { className?: string }) => (
+  <svg 
+    viewBox="0 0 12 12" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg" 
+    className={className}
+  >
+    <path 
+      d="M1 11L11 1M11 1H3.5M11 1V8.5" 
+      stroke="currentColor" 
+      strokeWidth="1.2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
 const Navbar = () => (
   <nav className="fixed top-0 left-0 w-full z-50 px-8 py-10 flex justify-center items-baseline mix-blend-difference text-white">
     <div className="flex gap-12 text-[10px] uppercase tracking-[0.2em] font-medium">
@@ -101,7 +120,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
         </div>
       </div>
       <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-widest mt-2 hover:mr-2 transition-all">
-        View Project ↗
+        View Project <ArrowIcon />
       </a>
     </div>
   </div>
@@ -153,7 +172,7 @@ const App = () => {
                   ))}
                 </div>
                 <a href={project.link} className="text-[10px] uppercase tracking-widest border-b border-black pb-1">
-                  GitHub Pages ↗
+                  GitHub Pages <ArrowIcon className="w-2.5 h-2.5" />
                 </a>
               </div>
             ))}
