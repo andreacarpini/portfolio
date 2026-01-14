@@ -73,15 +73,49 @@ const ArrowIcon = ({ className = "w-3 h-3" }: { className?: string }) => (
   </svg>
 );
 
-const Navbar = () => (
-  <nav className="fixed top-0 left-0 w-full z-50 px-8 py-10 flex justify-center items-baseline mix-blend-difference text-white">
-    <div className="flex gap-12 text-[10px] uppercase tracking-[0.2em] font-medium">
-      <a href="#work" className="hover:opacity-50 transition-opacity">Projects</a>
-      <a href="#process" className="hover:opacity-50 transition-opacity">In Process</a>
-      <a href="mailto:bluer.mullion.0h@icloud.com" className="hover:opacity-50 transition-opacity">Contact</a>
-    </div>
-  </nav>
-);
+const Navbar = () => {
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault();
+    const element = document.getElementById(id);
+    if (element) {
+      const offset = 120; // Account for the fixed navbar
+      const bodyRect = document.body.getBoundingClientRect().top;
+      const elementRect = element.getBoundingClientRect().top;
+      const elementPosition = elementRect - bodyRect;
+      const offsetPosition = elementPosition - offset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+      
+      // Update URL hash without jumping
+      window.history.pushState(null, '', `#${id}`);
+    }
+  };
+
+  return (
+    <nav className="fixed top-0 left-0 w-full z-50 px-8 py-10 flex justify-center items-baseline mix-blend-difference text-white">
+      <div className="flex gap-12 text-[10px] uppercase tracking-[0.2em] font-medium">
+        <a 
+          href="#work" 
+          onClick={(e) => handleScroll(e, 'work')} 
+          className="hover:opacity-50 transition-opacity"
+        >
+          Projects
+        </a>
+        <a 
+          href="#process" 
+          onClick={(e) => handleScroll(e, 'process')} 
+          className="hover:opacity-50 transition-opacity"
+        >
+          In Process
+        </a>
+        <a href="mailto:bluer.mullion.0h@icloud.com" className="hover:opacity-50 transition-opacity">Contact</a>
+      </div>
+    </nav>
+  );
+};
 
 const Hero = () => (
   <section className="min-h-screen flex flex-col justify-center px-8 md:px-24">
@@ -118,7 +152,6 @@ const ProjectCard = ({ project }: { project: Project }) => (
           ))}
         </div>
       </div>
-      {/* FIXED: Added anchor tag with link */}
       <a 
         href={project.link} 
         target="_blank" 
@@ -140,7 +173,7 @@ const App = () => {
       <Navbar />
       <Hero />
 
-      <main id="work" className="px-8 md:px-24 pb-32">
+      <main id="work" className="px-8 md:px-24 pb-32 scroll-mt-32">
         <div className="flex items-center gap-8 mb-24 md:mb-32">
           <h2 className="serif text-3xl md:text-5xl shrink-0">Recent Works</h2>
           <div className="h-[1px] w-full bg-neutral-200"></div>
@@ -154,7 +187,7 @@ const App = () => {
           ))}
         </div>
 
-        <section id="process" className="mt-32">
+        <section id="process" className="mt-32 scroll-mt-32">
           <div className="flex items-center gap-8 mb-24 md:mb-32">
             <h2 className="serif text-3xl md:text-5xl shrink-0">In Process</h2>
             <div className="h-[1px] w-full bg-neutral-200"></div>
