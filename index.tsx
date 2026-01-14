@@ -56,7 +56,7 @@ const PROJECTS: Project[] = [
 // --- Components ---
 
 const Navbar = () => (
-  <nav className="fixed top-0 left-0 w-full z-50 px-8 py-10 flex justify-between items-baseline mix-blend-difference text-white">
+  <nav className="fixed top-0 left-0 w-full z-50 px-8 py-10 flex justify-center items-baseline mix-blend-difference text-white">
     <div className="flex gap-12 text-[10px] uppercase tracking-[0.2em] font-medium">
       <a href="#work" className="hover:opacity-50 transition-opacity">Projects</a>
       <a href="#process" className="hover:opacity-50 transition-opacity">In Process</a>
