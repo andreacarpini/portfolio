@@ -53,7 +53,6 @@ const PROJECTS: Project[] = [
   }
 ];
 
-// --- Components ---
 
 // --- Shared Components ---
 
@@ -62,7 +61,7 @@ const ArrowIcon = ({ className = "w-3 h-3" }: { className?: string }) => (
     viewBox="0 0 12 12" 
     fill="none" 
     xmlns="http://www.w3.org/2000/svg" 
-    className={className}
+    className={`shrink-0 ${className}`}
   >
     <path 
       d="M1 11L11 1M11 1H3.5M11 1V8.5" 
@@ -107,8 +106,8 @@ const ProjectCard = ({ project }: { project: Project }) => (
         className="project-image w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
       />
     </div>
-    <div className="flex justify-between items-start">
-      <div className="max-w-md">
+    <div className="flex justify-between items-start gap-4">
+      <div className="flex-1">
         <h3 className="serif text-2xl mb-2">{project.title}</h3>
         <p className="text-sm text-neutral-500 mb-4 leading-relaxed font-light">{project.description}</p>
         <div className="flex flex-wrap gap-x-4 gap-y-2">
@@ -119,9 +118,9 @@ const ProjectCard = ({ project }: { project: Project }) => (
           ))}
         </div>
       </div>
-      <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-[10px] uppercase tracking-widest mt-2 hover:mr-2 transition-all">
-        View Project <ArrowIcon />
-      </a>
+      <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-widest mt-2 group-hover:translate-x-1 transition-transform whitespace-nowrap shrink-0">
+        View <ArrowIcon />
+      </div>
     </div>
   </div>
 );
@@ -171,7 +170,7 @@ const App = () => {
                     <span key={t} className="text-[9px] uppercase tracking-widest text-neutral-300">{t}</span>
                   ))}
                 </div>
-                <a href={project.link} className="text-[10px] uppercase tracking-widest border-b border-black pb-1">
+                <a href={project.link} className="text-[10px] uppercase tracking-widest border-b border-black pb-1 whitespace-nowrap">
                   GitHub Pages <ArrowIcon className="w-2.5 h-2.5" />
                 </a>
               </div>
