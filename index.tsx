@@ -60,7 +60,7 @@ const Navbar = () => (
     <div className="flex gap-12 text-[10px] uppercase tracking-[0.2em] font-medium">
       <a href="#work" className="hover:opacity-50 transition-opacity">Projects</a>
       <a href="#process" className="hover:opacity-50 transition-opacity">In Process</a>
-      <a href="mailto:hello@andrewkarpensky.com" className="hover:opacity-50 transition-opacity">Contact</a>
+      <a href="mailto:bluer.mullion.0h@icloud.com" className="hover:opacity-50 transition-opacity">Contact</a>
     </div>
   </nav>
 );
@@ -168,7 +168,7 @@ const App = () => {
           </div>
           <div className="flex flex-col gap-2 text-[10px] uppercase tracking-[0.3em]">
             <a href="https://github.com/andreacarpini" className="hover:opacity-50 transition-opacity">GitHub</a>
-            <span className="text-neutral-300 mt-4">© 2026</span>
+            <a href="https://www.fiverr.com/s/Ldb2X80" className="hover:opacity-50 transition-opacity">Fiverr</a>
           </div>
         </div>
       </footer>
