@@ -17,11 +17,11 @@ interface Project {
 const PROJECTS: Project[] = [
   {
     id: 1,
-    title: "Ethereal Commerce",
-    description: "A headless commerce experience focusing on ultra-minimal UI and seamless transitions.",
-    tools: ["React", "Next.js", "Shopify API", "Tailwind"],
-    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=2000&auto=format&fit=crop",
-    link: "https://github.com/andrew-karpensky",
+    title: "Stephen Asma",
+    description: "A professional portfolio website for Stephen Asma, Professor of Philosophy, author, and cultural critic. Features an artistic design showcasing publications, research, and media appearances.",
+    tools: ["JavaScript", "HTML5", "CSS3"],
+    image: "/images/beetle.jpeg",
+    link: "https://stephenasma.com",
     status: 'completed'
   },
   {
@@ -167,8 +167,8 @@ const App = () => {
             <h4 className="serif text-4xl mb-4">Andrew Karpensky</h4>
           </div>
           <div className="flex flex-col gap-2 text-[10px] uppercase tracking-[0.3em]">
-            <a href="https://github.com/andreacarpini" className="hover:opacity-50 transition-opacity">GitHub</a>
-            <a href="https://www.fiverr.com/s/Ldb2X80" className="hover:opacity-50 transition-opacity">Fiverr</a>
+            <a href="https://github.com/andreacarpini" target="_blank" className="hover:opacity-50 transition-opacity">GitHub</a>
+            <a href="https://www.fiverr.com/s/Ldb2X80" target="_blank" className="hover:opacity-50 transition-opacity">Fiverr</a>
           </div>
         </div>
       </footer>
