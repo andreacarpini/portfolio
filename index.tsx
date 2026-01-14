@@ -57,7 +57,6 @@ const PROJECTS: Project[] = [
 
 const Navbar = () => (
   <nav className="fixed top-0 left-0 w-full z-50 px-8 py-10 flex justify-between items-baseline mix-blend-difference text-white">
-    <div className="serif text-xl font-medium tracking-tight">AK.</div>
     <div className="flex gap-12 text-[10px] uppercase tracking-[0.2em] font-medium">
       <a href="#work" className="hover:opacity-50 transition-opacity">Projects</a>
       <a href="#process" className="hover:opacity-50 transition-opacity">In Process</a>
@@ -74,7 +73,7 @@ const Hero = () => (
         <span className="italic">Karpensky</span>
       </h1>
       <p className="text-lg md:text-xl font-light leading-relaxed max-w-xl text-neutral-600">
-        Web developer crafting high-end digital experiences where functionality meets sculptural minimalism.
+        Web developer.
       </p>
     </div>
   </section>
@@ -119,7 +118,7 @@ const App = () => {
 
       <main id="work" className="px-8 md:px-24 pb-32">
         <div className="flex items-center gap-8 mb-24 md:mb-32">
-          <h2 className="serif text-3xl md:text-5xl shrink-0">Selected Works</h2>
+          <h2 className="serif text-3xl md:text-5xl shrink-0">Recent Works</h2>
           <div className="h-[1px] w-full bg-neutral-200"></div>
         </div>
 
@@ -166,15 +165,10 @@ const App = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-12">
           <div>
             <h4 className="serif text-4xl mb-4">Andrew Karpensky</h4>
-            <p className="text-sm text-neutral-400 font-light max-w-xs">
-              Based in the digital ether. Open for selected collaborative projects in 2024.
-            </p>
           </div>
           <div className="flex flex-col gap-2 text-[10px] uppercase tracking-[0.3em]">
-            <a href="https://github.com/andrew-karpensky" className="hover:opacity-50 transition-opacity">GitHub</a>
-            <a href="#" className="hover:opacity-50 transition-opacity">LinkedIn</a>
-            <a href="#" className="hover:opacity-50 transition-opacity">Instagram</a>
-            <span className="text-neutral-300 mt-4">© 2024 AK PORTFOLIO</span>
+            <a href="https://github.com/andreacarpini" className="hover:opacity-50 transition-opacity">GitHub</a>
+            <span className="text-neutral-300 mt-4">© 2026</span>
           </div>
         </div>
       </footer>
