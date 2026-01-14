@@ -170,9 +170,9 @@ const App = () => {
                     <span key={t} className="text-[9px] uppercase tracking-widest text-neutral-300">{t}</span>
                   ))}
                 </div>
-                <a href={project.link} className="text-[10px] uppercase tracking-widest border-b border-black pb-1 whitespace-nowrap">
+                <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest border-b border-black pb-1 whitespace-nowrap">
                   GitHub Pages <ArrowIcon className="w-2.5 h-2.5" />
-                </a>
+                </div>
               </div>
             ))}
           </div>
