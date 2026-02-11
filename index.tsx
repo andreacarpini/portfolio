@@ -28,7 +28,7 @@ const PROJECTS: Project[] = [
     id: 2,
     title: "Medstar Consulting",
     description: "Medical tourism agency connecting US patients with Turkey's premier healthcare providers for surgical and wellness treatments.",
-    tools: ["Jekyll", "HTML5", "Tailwind", "JavaScript"],
+    tools: ["React", "TypeScript", "Tailwind", "JavaScript"],
     image: "./images/instanbul-guide.webp",
     link: "https://medstarconsult.com",
     status: 'completed'
@@ -146,7 +146,7 @@ const ProjectCard = ({ project }: { project: Project }) => (
         <p className="text-sm text-neutral-500 mb-4 leading-relaxed font-light">{project.description}</p>
         <div className="flex flex-wrap gap-x-4 gap-y-2">
           {project.tools.map(tool => (
-            <span key={tool} className="text-[9px] uppercase tracking-widest text-neutral-400 border-b border-neutral-200 pb-0.5">
+            <span key={tool} className="text-[9px] uppercase tracking-widest text-neutral-400">
               {tool}
             </span>
           ))}
