@@ -225,7 +225,6 @@ const App = () => {
           </div>
           <div className="flex flex-col gap-2 text-[10px] uppercase tracking-[0.3em]">
             <a href="https://github.com/andreacarpini" target="_blank" className="hover:opacity-50 transition-opacity">GitHub</a>
-            <a href="https://www.fiverr.com/s/Ldb2X80" target="_blank" className="hover:opacity-50 transition-opacity">Fiverr</a>
           </div>
         </div>
       </footer>
